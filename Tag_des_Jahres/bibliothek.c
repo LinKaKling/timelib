@@ -1,16 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "bibliothek.h"
 
-struct dateS{
-    int day;
-    int month;
-    int year;
-};
 
-int day_of_the_year(){
+int day_of_the_year(struct dateS date){
     return 0;
 }
-void input_date();
+void input_date(struct dateS *date){
+    printf("Bitte Tag eingeben:");
+    scanf("%d",&date->day);
+    printf("Bitte Monat eingeben:");
+    scanf("%d",&date->month);
+    printf("Bitte Tag eingeben:");
+    scanf("%d",&date->year);
+}
 
 //Funktion überprüft ob die übergebene Zahl:
 //unter 1582 ist -> -1
@@ -56,6 +59,31 @@ int get_days_for_month(struct dateS date){
 
     return 0;
 }
-int exists_date(){
+int exists_date(struct dateS date){
+
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

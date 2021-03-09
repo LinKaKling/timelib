@@ -8,13 +8,7 @@
 #include <stdlib.h>
 #include "bibliothek.h"
 
-/*das sollte in die Bibliothek aber dann läufts nicht
-struct dateS{
-    int day;
-    int month;
-    int year;
-};
-*/
+
 int main()
 {
     struct dateS date;
@@ -22,7 +16,7 @@ int main()
     printf("Tag: %d \n",date.day);
     printf("Monat: %d \n",date.month);
     printf("Jahr: %d \n",date.year);
-    IF(exists_date(date)){
+    if(exists_date(date) == 1){
         printf("Jo");
     }else{
         printf("else");

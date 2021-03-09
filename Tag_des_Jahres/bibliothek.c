@@ -2,19 +2,6 @@
 #include <stdlib.h>
 #include "bibliothek.h"
 
-
-int day_of_the_year(struct dateS date){
-    return 0;
-}
-void input_date(struct dateS *date){
-    printf("Bitte Tag eingeben:");
-    scanf("%d",&date->day);
-    printf("Bitte Monat eingeben:");
-    scanf("%d",&date->month);
-    printf("Bitte Tag eingeben:");
-    scanf("%d",&date->year);
-}
-
 //Funktion überprüft ob die übergebene Zahl:
 //unter 1582 ist -> -1
 //als Jahr ein Schaltjahr ist -> 1
@@ -59,13 +46,36 @@ int get_days_for_month(struct dateS date){
 
     return 0;
 }
+
+//überprüft ob gültiges Datum vom 1.1.1582 bis zum 31.12.2400 übergeben wurde (return 1 -> gültig)
 int exists_date(struct dateS date){
+    if(date.year < 1582 || date.year > 2400 || date.month < 1 || date.month > 12 || date.day < 1 || date.day > get_days_for_month(date)){
+        return 0;
+    }
+    return 1;
+}
+
+//Fordert den/die Bediener*in auf ein gültiges Datum vom 1.1.1582 bis zum 31.12.2400 einzugeben bis dies geschieht :-D (nutzt exists_date())
+void input_date(struct dateS *date){
+    do{
+        printf("Bitte geben sie ein gueltiges Datum vom 1.1.1582 bis zum 31.12.2400 ein... \n");
+        printf("Bitte Tag eingeben: ");
+        scanf("%d",&date->day);
+        fflush(stdin);
+        printf("Bitte Monat eingeben: ");
+        scanf("%d",&date->month);
+        fflush(stdin);
+        printf("Bitte Jahr eingeben: ");
+        scanf("%d",&date->year);
+        fflush(stdin);
+    }while(!exists_date(*date));
+
+}
+
+int day_of_the_year(struct dateS date){
 
     return 0;
 }
-
-
-
 
 
 

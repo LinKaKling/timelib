@@ -13,13 +13,7 @@ int main()
 {
     struct dateS date;
     input_date(&date);
-    printf("Tag: %d \n",date.day);
-    printf("Monat: %d \n",date.month);
-    printf("Jahr: %d \n",date.year);
-    if(exists_date(date) == 1){
-        printf("Jo");
-    }else{
-        printf("else");
-    }
+    int dayOfYear = day_of_the_year(date);
+    printf("Am eingegebenen Datum ist es der: %d -te Tag des Jahres",dayOfYear);
     return 0;
 }

@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1614680185 source:c:\users\orange\documents\codeblocks\tag_des_jahres\main.c
+	<stdio.h>
+	<stdlib.h>
+	"bibliothek.h"
+
+1615231472 c:\users\orange\documents\codeblocks\tag_des_jahres\bibliothek.h
+	<stdio.h>
+	<stdlib.h>
+
+1615230569 source:c:\users\orange\documents\codeblocks\tag_des_jahres\bibliothek.c
+	<stdio.h>
+	<stdlib.h>
+

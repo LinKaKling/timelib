@@ -1,9 +1,13 @@
-#ifndef BIBLIOTHEK_H_INCLUDED
-#define BIBLIOTHEK_H_INCLUDED
-#include <stdio.h>
-#include <stdlib.h>
+/*
+*Headerdatei enthält struct und Funktionsprototypen
+*Kasimir Klinger 09.03.2021
+*/
 
-struct dateS{
+#ifndef TIME_H_INCLUDED
+#define TIME_H_INCLUDED
+
+struct dateS
+{
     int day;
     int month;
     int year;
@@ -15,4 +19,5 @@ int is_leapyear(int year);
 int get_days_for_month(struct dateS date);
 int exists_date(struct dateS date);
 
-#endif // BIBLIOTHEK_H_INCLUDED
+
+#endif // TIME_H_INCLUDED

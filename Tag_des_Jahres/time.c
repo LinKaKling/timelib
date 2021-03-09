@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "bibliothek.h"
+#include "time.h"
 
 //Funktion überprüft ob die übergebene Zahl:
 //unter 1582 ist -> -1
@@ -25,12 +25,12 @@ int is_leapyear(int year)
             }
             else
             {
-                return 0; //nicht durch 400 teilbar
+                return 0; //nicht durch 400 teilbar aber durch 100 und 4
             }
         }
         else
         {
-            return 1; //nicht durch 100 teilbar
+            return 1; //nicht durch 100 teilbar aber durch 4
         }
     }
     else

@@ -6,7 +6,7 @@
 */
 #include <stdio.h>
 #include <stdlib.h>
-#include "bibliothek.h"
+#include "time.h"
 
 
 int main()
@@ -14,6 +14,6 @@ int main()
     struct dateS date;
     input_date(&date);
     int dayOfYear = day_of_the_year(date);
-    printf("Am eingegebenen Datum ist es der: %d -te Tag des Jahres",dayOfYear);
+    printf("Am eingegebenen Datum ist es der %d -te Tag des Jahres",dayOfYear);
     return 0;
 }
